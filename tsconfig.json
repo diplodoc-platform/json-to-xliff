@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ES6"],
+    "module": "ESNext",
+    "baseUrl": ".",
+    "declaration": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "target": "ESNext"
+  },
+  "include": ["./src/**/*.ts"]
+}

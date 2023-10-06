@@ -1,0 +1,44 @@
+title: Docs with Mermaid
+href: index.md
+test1:
+  a: "1"
+  b: "2"
+test2:
+  a: "3"
+navigation:
+  logo:
+    dark:
+      icon: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/storybook/images/icon_1_dark.svg'
+      text: 'ModelsJS'
+    light:
+      icon: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/storybook/images/icon_1_light.svg'
+      text: 'ModelsJS'
+  header:
+    leftItems:
+      - text: 'Link3'
+        type: 'link'
+        url: 'https://example.com'
+      - text: 'Link4'
+        type: 'link'
+        url: 'https://example.com'
+    rightItems:
+      - label: 'Star @gravity-ui/page-constructor on GitHub'
+        text: 'Star'
+        type: 'github-button'
+        url: 'https://github.com/gravity-ui/page-constructor'
+      - label: 'Sign In with GitHub'
+        text: 'Sign In'
+        theme: 'github'
+        size: 'l'
+        type: 'button'
+        url: '/login/github'
+items:
+  - name: Общие сведения
+    expanded: true
+    items:
+      - name: Some simple diagram
+        href: ./diagram.md
+      - name: Inner
+        items:
+          - name: Inner Diagram
+            href: ./inner/test.md

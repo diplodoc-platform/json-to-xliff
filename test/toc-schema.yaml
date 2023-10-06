@@ -1,0 +1,74 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://diplodoc.com/toc.schema.json
+title: Table Of Content schema definition
+type: object
+
+properties:
+  title:
+    type: string
+    translate: text
+  test1:
+    allOf:
+      - $ref: "#/$defs/A"
+      - $ref: "#/$defs/B"
+  test2:
+    anyOf:
+      - $ref: "#/$defs/A"
+      - $ref: "#/$defs/B"
+  navigation:
+    type: object
+    properties:
+      logo:
+        oneOf:
+          - $ref: "#/$defs/NavLogo"
+          - type: object
+            properties:
+              dark:
+                $ref: "#/$defs/NavLogo"
+              light:
+                $ref: "#/$defs/NavLogo"
+            required: dark, light
+
+  items:
+    type: array
+    items:
+      $ref: "#/$defs/TocItem"
+
+required:
+  - title
+
+$defs:
+  A:
+    type: object
+    properties:
+      a:
+        type: string
+        translate: text
+  B:
+    type: object
+    properties:
+      b:
+        type: string
+        translate: text
+  NavLogo:
+    type: object
+    properties:
+      icon:
+        type: string
+      text:
+        type: string
+        translate: text
+    required:
+      - text
+  TocItem:
+    type: object
+    properties:
+      name:
+        type: string
+        translate: text
+      href:
+        type: string
+      items:
+        type: array
+        items:
+          $ref: "#/$defs/TocItem"
